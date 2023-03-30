@@ -6,12 +6,21 @@
     <link rel="stylesheet" href="indexStyle.css">
 </head>
 <body>
-    <div id="alkuun">
-    
-        <a href="#alku" > alkuun </a>
-        <button id="puoli" > puoliväliin </button>
-        <button id="loppu" >Loppuun </button>
-    </div>
+    <div id="flexwrap">
+        <div id="alkuun" >
+        <div>
+
+            <a href="#alku" > alkuun </a>
+        </div>
+        <div>
+
+            <button id="puoli" > puoliväliin </button>
+        </div>
+        <div>
+
+            <button id="loppu" >Loppuun </button>
+        </div>
+        </div>
     <form  style="display:flex;flex-direction: column;">
       <p id="alku">Teksti puoli</p>
       <label for="left">
@@ -30,23 +39,22 @@
        
     
 </form>
-<div id="flexwrap">
     
     <div id="content">
         <div>
             
-            <h1 id="header"> First Web Page</h1>
+            <h1 id="header"> Vasemmalla</h1>
           
         </div>
     </div>
     
     
-</div>
-</div>
-<div id="lorem" >
-    <div id="lore">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+    <div id="lorem" >
+        <div id="lore">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+        </div>
     </div>
+</div>
     <script type="module">
         import init,{left,center,right,scrollEnd,ran,half,loppu} from './pkg/wasm_canvas.js';
         init().then(() =>{
