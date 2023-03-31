@@ -100,9 +100,9 @@ radius: 100
 
 
 
-canv.addEventListener('click',clicks);
+canv.addEventListener('click',
 
- function clicks(event){
+ function (event){
     event.preventDefault(); // prevent default behavior of the click event
 
     let clickpos = [event.clientX - rect.left, event.clientY - rect.top];
@@ -115,7 +115,7 @@ canv.addEventListener('click',clicks);
             i--; // adjust the index to account for the removed square
         }
     }
-}
+});
     function timedorb(){
         // prevent default behavior of the click event
     
