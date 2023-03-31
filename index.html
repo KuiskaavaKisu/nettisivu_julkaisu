@@ -1,72 +1,59 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-    <title>My First Web Page</title>
-    <link rel="stylesheet" href="indexStyle.css">
+<head>
+    <link rel="stylesheet" href="index.css">
+   <meta charset="utf-8">
+   <script defer src="index.js"></script>
 </head>
-<body>
-    <div id="flexwrap">
-        <div id="alkuun" >
-        <div>
 
-            <a href="#alku" > alkuun </a>
-        </div>
-        <div>
 
-            <button id="puoli" > puoliväliin </button>
-        </div>
-        <div>
-
-            <button id="loppu" >Loppuun </button>
-        </div>
-        </div>
-    <form  style="display:flex;flex-direction: column;">
-      <p id="alku">Teksti puoli</p>
-      <label for="left">
-            vasen
-          <input type="radio" id="left" name="align" value="left">
-        </label>
-        <label for="center">
-            keskelle
-            <input type="radio" id="center" name="align" value="center">
-        </label>
-        <label for="right">
-       oikealle
-        <input type="radio" id="right" name="align" value="right">
-    </label>
-      
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+  
+  <body>
+    <div class="grid-wrapper">
+      <header>
+        <span class="logo">a</span>
+        <ul id="navigation">
        
-    
-</form>
-    
-    <div id="content">
-        <div>
+            <li><a href="index.html">Aloita alusta</a></li>
+            <li><a href="https://kuiskaavakisu.github.io/nettisivu_julkaisu/">lorem yksi sivu</a></li>
             
-            <h1 id="header"> Vasemmalla</h1>
-          
-        </div>
+        
+        </ul>
+      </header>
+      <aside>
+        <h1>Naiivi algorithmi</h1>
+     
+        <p>
+          osumis algorithmi katsoo osuuko kohde toisiin kohteisiin
+          menemällä yksi kerrallaan kohteiden läpi ja tarkistamalla
+            onko kohde osunut toiseen kohdeen.
+            Nopeus on: 
+            Big(O) = O(n^2)
+            Se hitanee huomattavasti kun kohteita on paljon.
+
+        </p>
+        <div class="button">
+
+           <a href="https://en.wikipedia.org/wiki/Big_O_notation"><p>Wikipedia</p>
+           </div>
+      </aside>
+   
+     
+      
+      <div class="background">
+         <canvas id = "canvas" style="border:none;position:absolute;z-index:-1;" ></canvas>
+         
+      </div>
+      <footer>
+     
+        </span>
+      </footer>
     </div>
-    
-    
-    <div id="lorem" >
-        <div id="lore">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-        </div>
-    </div>
-</div>
-    <script type="module">
-        import init,{left,center,right,scrollEnd,ran,half,loppu} from './pkg/wasm_canvas.js';
-        init().then(() =>{
-            ran();
-            document.getElementById("left").addEventListener("click",left);
-            document.getElementById("center").addEventListener("click",center);
-            document.getElementById("right").addEventListener("click",right);
-            document.addEventListener("scroll",scrollEnd);
-            document.getElementById("puoli").addEventListener("click",half);
-            document.getElementById("loppu").addEventListener("click",loppu);
-        });
-       
-    </script>
-</body>
+  </body>
 </html>
+
+      
