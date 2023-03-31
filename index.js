@@ -135,8 +135,8 @@ canv.addEventListener('click',clicks);
             x: clickpos[0],
             y: clickpos[1],
             old: [clickpos[0] -1.0,clickpos[1]-1.0],
-            width: 100,
-            height: 100,
+            width: 10,
+            height: 10,
             acc:[1.0,0.0],
             vel:[0.0,0.0],
             radius: 10
