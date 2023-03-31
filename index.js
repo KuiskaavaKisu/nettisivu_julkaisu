@@ -175,7 +175,7 @@ function update(square){
     
     
     // Apply friction
-    const frictionCoeff = 0.001; // adjust this value as needed
+    const frictionCoeff = 0.00; // adjust this value as needed
     const frictionForce = [-square.vel[0] * frictionCoeff, -square.vel[1] * frictionCoeff];
     square.acc[0] += frictionForce[0];
     square.acc[1] += frictionForce[1];
