@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+    <div id="flexwrap">
+        <div id="alkuun" >
+        <div>
+
+            <a href="#alku" > alkuun </a>
+        </div>
+        <div>
+
+            <button id="puoli" > puoliväliin </button>
+        </div>
+        <div>
+
+            <button id="loppu" >Loppuun </button>
+        </div>
+        </div>
+    <form  style="display:flex;flex-direction: column;">
+      <p id="alku">Teksti puoli</p>
+      <label for="left">
+            vasen
+          <input type="radio" id="left" name="align" value="left">
+        </label>
+        <label for="center">
+            keskelle
+            <input type="radio" id="center" name="align" value="center">
+        </label>
+        <label for="right">
+       oikealle
+        <input type="radio" id="right" name="align" value="right">
+    </label>
+      <link href="flexsivu.html">
+       
+    
+</form>
+    
+    <div id="content">
+        <div>
+            
+            <h1 id="header"> Vasemmalla</h1>
+          
+        </div>
+    </div>
+    
+    
+    <div id="lorem" >
+        <div id="lore">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+        </div>
+    </div>
+</div>
+    <script type="module">
+        import init,{left,center,right,scrollEnd,ran,half,loppu} from './pkg/wasm_canvas.js';
+        init().then(() =>{
+            ran();
+            document.getElementById("left").addEventListener("click",left);
+            document.getElementById("center").addEventListener("click",center);
+            document.getElementById("right").addEventListener("click",right);
+            document.addEventListener("scroll",scrollEnd);
+            document.getElementById("puoli").addEventListener("click",half);
+            document.getElementById("loppu").addEventListener("click",loppu);
+        });
+       
+    </script>
+</body>
+</html>
