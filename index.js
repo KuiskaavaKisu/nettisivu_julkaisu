@@ -43,7 +43,7 @@ function bezir(){
 }
 function clean(){
     ctx.canvas.width = ctx.canvas.width;
-    console.log('clean');
+    
 }
 
 
@@ -162,6 +162,8 @@ function render(){
             circleCollision(squares[i], squares[j]);
         }
     }
+    let amount = document.getElementById("amount");
+    amount.innerHTML = squares.length;
    
 }
 function update(square){
